@@ -48,7 +48,7 @@ To program the Pi using the Grove sensors and actuators, you will need to instal
     ```sh
     sudo apt install git python3-dev python3-pip --yes
 
-    git clone https://github.com/Seeed-Studio/grove.py
+    git clone https://github.com/logistik-digitalisierung/grove.py
     cd grove.py
     sudo pip3 install .
 
