@@ -176,7 +176,7 @@ Configure the installed Pi software and install the Grove libraries.
     ```sh
     sudo apt install git python3-dev python3-pip --yes
 
-    git clone https://github.com/Seeed-Studio/grove.py
+    git clone https://github.com/logistik-digitalisierung/grove.py
     cd grove.py
     sudo pip3 install .
 
