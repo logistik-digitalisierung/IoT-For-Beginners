@@ -56,7 +56,7 @@ Write the device code.
 
     ```python
     mqtt_client = mqtt.Client(client_name)
-    mqtt_client.connect('test.mosquitto.org')
+    mqtt_client.connect('mosquitto.pitzl.net')
     
     mqtt_client.loop_start()
 
