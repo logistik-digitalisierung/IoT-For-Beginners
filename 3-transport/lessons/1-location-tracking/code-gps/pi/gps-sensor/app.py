@@ -13,7 +13,7 @@ while True:
         line = serial.readline().decode('utf-8')
 
         while len(line) > 0:
-            print_gps_data()
+            print_gps_data(line)
             line = serial.readline().decode('utf-8')
 
     except UnicodeDecodeError:
