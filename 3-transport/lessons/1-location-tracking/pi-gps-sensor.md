@@ -162,7 +162,7 @@ Program the device.
             line = serial.readline().decode('utf-8')
               
             while len(line) > 0:
-                print_gps_data()
+                print_gps_data(line)
                 line = serial.readline().decode('utf-8')
       
         # There's a random chance the first byte being read is part way through a character.
