@@ -32,12 +32,18 @@ def print_gps_data(line):
         print("Sending telemetry", message_json)
         message = Message(json.dumps(message_json))
         device_client.send_message(message)
+        time.sleep(60)
 
 while True:
-    line = serial.readline().decode('utf-8')
-
-    while len(line) > 0:
-        print_gps_data(line)
+    try:
         line = serial.readline().decode('utf-8')
 
-    time.sleep(60)
+        while len(line) > 0:
+            print_gps_data(line)
+            line = serial.readline().decode('utf-8')
+
+    # There's a random chance the first byte being read is part way through a character.
+    # Read another full line and continue.
+
+    except UnicodeDecodeError:
+        line = serial.readline().decode('utf-8')
