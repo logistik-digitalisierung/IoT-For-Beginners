@@ -125,8 +125,8 @@ Program the device.
         line = serial.readline().decode('utf-8')
     
         while len(line) > 0:
-            print_gps_data(line)
             line = serial.readline().decode('utf-8')
+            print_gps_data(line)
     
         time.sleep(1)
     ```
